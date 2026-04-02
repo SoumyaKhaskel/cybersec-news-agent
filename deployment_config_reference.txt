@@ -1,0 +1,22 @@
+PROCFILE CONTENTS (save as: Procfile — no extension):
+────────────────────────────────────────
+web: uvicorn main:app --host 0.0.0.0 --port $PORT
+
+
+RAILWAY.JSON CONTENTS (save as: railway.json):
+────────────────────────────────────────
+{
+  "build": {
+    "builder": "NIXPACKS"
+  },
+  "deploy": {
+    "startCommand": "uvicorn main:app --host 0.0.0.0 --port $PORT",
+    "restartPolicyType": "ON_FAILURE",
+    "restartPolicyMaxRetries": 5
+  }
+}
+
+
+.PYTHON-VERSION CONTENTS (save as: .python-version — no extension):
+────────────────────────────────────────
+3.11

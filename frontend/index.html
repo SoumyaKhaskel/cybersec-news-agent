@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CyberSec News Feed</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-title">
+        <span class="header-icon">&#9632;</span>
+        CyberSec News Feed
+      </div>
+      <div class="header-meta" id="last-updated">Fetching data...</div>
+    </div>
+  </header>
+
+  <!-- STATS BAR -->
+  <section class="stats-bar">
+    <div class="stats-inner">
+      <div class="stat-card">
+        <div class="stat-label">Total articles</div>
+        <div class="stat-value" id="stat-total">--</div>
+      </div>
+      <div class="stat-card critical">
+        <div class="stat-label">Critical</div>
+        <div class="stat-value" id="stat-critical">--</div>
+      </div>
+      <div class="stat-card high">
+        <div class="stat-label">High</div>
+        <div class="stat-value" id="stat-high">--</div>
+      </div>
+      <div class="stat-card medium">
+        <div class="stat-label">Medium</div>
+        <div class="stat-value" id="stat-medium">--</div>
+      </div>
+      <div class="stat-card low">
+        <div class="stat-label">Low</div>
+        <div class="stat-value" id="stat-low">--</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FILTER BAR -->
+  <section class="filter-bar">
+    <div class="filter-inner">
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-severity="">All</button>
+        <button class="filter-btn critical" data-severity="Critical">Critical</button>
+        <button class="filter-btn high"     data-severity="High">High</button>
+        <button class="filter-btn medium"   data-severity="Medium">Medium</button>
+        <button class="filter-btn low"      data-severity="Low">Low</button>
+      </div>
+      <div class="search-wrap">
+        <input
+          type="text"
+          id="search-input"
+          class="search-input"
+          placeholder="Search articles..."
+          autocomplete="off"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- FEED -->
+  <main class="feed-container">
+    <div id="feed-grid" class="feed-grid">
+      <!-- Cards injected here by app.js -->
+    </div>
+
+    <div id="load-more-wrap" class="load-more-wrap" style="display:none">
+      <button id="load-more-btn" class="load-more-btn">Load more</button>
+    </div>
+
+    <div id="empty-state" class="empty-state" style="display:none">
+      <p>No articles found.</p>
+    </div>
+
+    <div id="error-state" class="error-state" style="display:none">
+      <p>Failed to load feed. Make sure the API is running.</p>
+      <button onclick="loadFeed(true)">Retry</button>
+    </div>
+
+    <div id="loading-state" class="loading-state">
+      <p>Loading threat intelligence...</p>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
