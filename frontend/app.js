@@ -1,7 +1,7 @@
 // ─────────────────────────────────────────
 // CONFIG — change to your Railway URL after deployment
 // ─────────────────────────────────────────
-const API_BASE_URL = "http://127.0.0.1:8000";
+const API_BASE_URL = "https://cybernewzsk.up.railway.app/";
 
 const ARTICLES_PER_PAGE  = 20;
 const AUTO_REFRESH_MS    = 5 * 60 * 1000; // 5 minutes
