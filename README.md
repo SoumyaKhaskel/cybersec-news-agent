@@ -2,8 +2,8 @@
 
 An autonomous AI-powered cybersecurity threat intelligence agent that fetches, summarises, severity-tags, and displays the latest cybersecurity news — with instant Telegram alerts for Critical threats.
 
-**Live dashboard:** https://YOUR_VERCEL_URL.vercel.app  
-**Live API:** https://YOUR_RAILWAY_URL.up.railway.app/docs
+**Live dashboard:** https://cybersec-news-agent.vercel.app/ 
+**Live API:** https://cybernewzsk.up.railway.app/
 
 ---
 
@@ -91,7 +91,7 @@ cybersec-news-agent/
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/YOUR_GITHUB_USERNAME/cybersec-news-agent.git
+git clone https://github.com/SoumyaKhaskel/cybersec-news-agent.git
 cd cybersec-news-agent
 
 # 2. Create virtual environment
@@ -155,4 +155,4 @@ TELEGRAM_CHAT_ID=your_telegram_chat_id
 
 ---
 
-*Built by Soumya — BlaZeFury | Completed: [2.04.26]*
+*Built by Soumya — Fury | Completed: [5.04.26]*
